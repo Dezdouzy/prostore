@@ -1,4 +1,5 @@
 import ProductCard from "./product-card";
+import { Product } from "@/types";
 
 
 const ProductList = (
@@ -7,7 +8,7 @@ const ProductList = (
         title, 
         limit
     }:{
-        data: any; 
+        data: Product[]; 
         title?:string; 
         limit?:number
     }) => {
