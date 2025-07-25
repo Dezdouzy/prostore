@@ -1,5 +1,5 @@
 
-
+// product-card.tsx
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -11,7 +11,7 @@ const ProductCard = ({product}:{product: Product }) => {
     return   ( 
       <Card className="w-full max-w-sm  ">
         <CardHeader>
-            <Link href={`/products/${product.slug}`}>
+            <Link href={`/product/${product.slug}`}>
                 <Image 
                     src={imageUrl} 
                     alt={product.name} 
@@ -31,7 +31,9 @@ const ProductCard = ({product}:{product: Product }) => {
               {product.stock>0 ? (
                 <ProductPrice  value={Number(product.price)}/>
               ):(
-                <p className="text-destructive">Out Of Stock</p>
+                // <p className="text-red">Out Of Stock</p>
+                <p className='text-destructive'>Out Of Stock</p>
+
               ) }
             </div>
         </CardContent>  

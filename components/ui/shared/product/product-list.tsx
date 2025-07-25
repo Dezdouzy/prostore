@@ -1,3 +1,5 @@
+
+// components/ui/shared/product/product-list.tsx
 import ProductCard from "./product-card";
 import { Product } from "@/types";
 
