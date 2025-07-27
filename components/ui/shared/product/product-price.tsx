@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 
-const ProductPrice = ({value, className}:{value: Number; className?:string}) => {
+const ProductPrice = ({value, className}:{value: number; className?:string}) => {
     // Ensure two decimal places
     const stringValue = value.toFixed(2);
     // Get the int/float 
