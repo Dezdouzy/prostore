@@ -1,0 +1,6 @@
+1 - Check the eslint.config.mjs because I excluded the other modules(not mine, like prisma...)
+maybe I should keep or not.
+2 - Maybe regenerate the secret with 
+redouane@Mac prostore % openssl rand -base64 32
+9RXWAii85B6Cl5JL7bjVw+AGMlmIZhREmPsjVgkdaVU=
+and copy the new one to the NEXTAUTH_SECRET variable?
