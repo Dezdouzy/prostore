@@ -21,3 +21,4 @@ git commit -m "$1"
 
 echo "🚀 Push vers le dépôt distant..."
 git push
+ 
