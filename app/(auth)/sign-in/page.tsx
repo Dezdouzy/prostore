@@ -10,15 +10,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { APP_NAME } from '@/lib/constants';
 import CredentialsSignInForm from './credentials-signin-form';
-// import { auth } from '@/auth';
-// import { redirect } from 'next/navigation';
+import { auth } from '@/auth';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Sign In',
 };
 
-const SignInPage =  () => {
+const SignInPage = async () => {
+  const session = await auth(); // Different than in the client component where we use a hook named useSession
 
+  if (session) {
+    return redirect("/");
+  }
   return (
     <div className='w-full max-w-md mx-auto'>
       <Card>
